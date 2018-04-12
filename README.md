@@ -10,6 +10,22 @@ GHost++ is no longer actively maintained. Nevertheless, GHost++ remains widely u
 
 If you are looking for a simple bot to host games from a server, consider [Aura](https://github.com/Josko/aura-bot/), an actively maintained fork of GHost++ with a greatly modernized core but with many features stripped out.
 
+Extra Setup
+-----------
+
+There are a few extra manual steps that have to be taken for GHost to run. See this thread for details: https://ghostplay.de/index.php/Thread/34931-Warcraft-1-29-patch-is-OUT/?pageNo=3
+
+And this wiki page as well: http://wiki.eurobattle.net/index.php?title=GHost_changes_in_patch_1.29
+
+The gist is that you need to add a blank `storm.dll` and `game.dll` to your Warcraft III directory so that the checksum still passes and you need to extra `Scripts/Blizzard.j` and `Scripts/common.j` from `War3x.mpq` using a tool like	MPQ Editor.
+
+The new replay build number is `6060`.
+
+Docker
+------
+
+`docker run --rm -p 9367:9367 -p 6112:6112 -p 6114:6114 -p 6113:6113 -v ghost.cfg:/opt/ghostpp/ghost.cfg lytedev/ghostpp`
+
 Compilation
 -----------
 

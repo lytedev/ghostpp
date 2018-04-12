@@ -1,0 +1,9 @@
+*.o
+*.so
+/ghost.cfg
+ghost.dbs
+ghost/ghost++
+mapcfgs/common.j
+mapcfgs/blizzard.j
+maps/
+ghost.log
